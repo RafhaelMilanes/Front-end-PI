@@ -16,28 +16,29 @@ export const SignupForm = () => {
     const handleEnterButton = () => {
         router.replace("/home")
     }
-
     return (
         <>
             <Input
+                label="Nome:"
                 placeholder="Digite seu nome"
                 icon={faPerson}
                 value={nameField}
                 onChange={t => setNameField(t)}
             />
             <Input
+                label="Email:"
                 placeholder="Digite seu e-mail"
                 icon={faEnvelopeOpen}
                 value={emailField}
                 onChange={t => setEmailField(t)}
             />
             <Input
+                label="Senha:"
                 placeholder="Digite sua senha"
                 value={passwordField}
                 onChange={t => setPasswordField(t)}
                 password
             />
-
             <Button label="Criar conta" onClick={handleEnterButton} size={1}/>
         </>
     )
