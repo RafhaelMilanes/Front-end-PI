@@ -11,7 +11,7 @@ export default function Page() {
         </div>
 
         <div className="p-6">
-            <div className=" mt-10 mb-14 flex flex-col gap-6">
+            <div className=" mt-10 mb-14 flex flex-col gap-4">
                 <SignupForm />
             </div>
             <div className="flex flex-col justify-center items-center gap-1 md:flex-row">
