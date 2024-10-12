@@ -27,30 +27,27 @@ export const Input = ({
 }: Props) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <>
+    <div className="mb-5">
       {label && (
-        <div>
-          <label>{label}</label>
-        </div>
+          <label className="">{label}</label>
       )}
 
-      <div className="flex items-center h-14 rounded-3xl border-2 transition-colors duration-200 focus-within:border-[#97A2D7]">
+      <div className="flex items-center h-14 rounded-xl border-2 bg-[#D9D9D9] transition-colors duration-200 focus-within:border-[#97A2D7]">
         <input
           type={password && !showPassword ? "password" : "text"}
-          className="flex-1 outline-none h-full px-4 bg-transparent border-none"
-          placeholder={placeholder}
+          className="flex-1 outline-none h-full px-4 rounded-xl bg-[#D9D9D9] border-none"
           value={value}
           onChange={(e) => onChange && onChange(e.target.value)}
         />
-        {icon && <FontAwesomeIcon icon={icon} className="size-6 mr-4" />}
+        {icon && <FontAwesomeIcon icon={icon} className="size-6 mr-4 bg-[#D9D9D9]" />}
         {password && (
           <FontAwesomeIcon
             onClick={() => setShowPassword(!showPassword)}
             icon={showPassword ? faEye : faEyeSlash}
-            className="cursor-pointer mr-4 size-6 "
+            className="cursor-pointer mr-4 size-6 bg-[#D9D9D9]"
           />
         )}
       </div>
-    </>
+    </div>
   );
 };

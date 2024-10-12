@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Input } from "../ui/input";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export const SigninForm = () => {
     const router = useRouter();
@@ -31,6 +32,13 @@ export const SigninForm = () => {
                 onChange={t => setPasswordField(t)}
                 password
             />
+
+            <div className="flex justify-center items-center self-end md:flex-row">
+                <p className="text-gray-500">Ainda nao tem conta?</p>
+                <Link href={"/signup"} className="hover:underline">
+                Casdastre-se
+                </Link>
+            </div>
 
             <Button label="Entrar" onClick={handleEnterButton} size={1}/>
         </>
