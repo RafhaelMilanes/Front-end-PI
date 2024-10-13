@@ -33,7 +33,7 @@ export const SigninForm = () => {
                 password
             />
 
-            <div className="flex justify-center items-center self-end md:flex-row">
+            <div className="flex justify-center items-center self-end mt-[-20px] md:flex-row">
                 <p className="text-gray-500">Ainda nao tem conta?</p>
                 <Link href={"/signup"} className="hover:underline">
                 Casdastre-se
