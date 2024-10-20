@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Calouro loco",
+  title: "Social Party",
   description: "Encontre o desande da calourada",
 };
 
