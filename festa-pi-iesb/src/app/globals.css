@@ -14,5 +14,5 @@ body {
   font-family: "itim";
   font-style: normal;
   font-display: swap;
-  src: url(../assets/fonts/Itim-Regular.ttf) format("TrueType");
+  src: url(../../public/assets/fonts/Itim-Regular.ttf) format("TrueType");
 }
