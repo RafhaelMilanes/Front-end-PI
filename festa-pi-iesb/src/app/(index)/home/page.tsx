@@ -1,3 +1,4 @@
+"use client"
 import NavBar from "@/components/ui/navBar";
 
 export default function Page() {
