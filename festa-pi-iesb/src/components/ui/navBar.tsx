@@ -4,8 +4,8 @@ import { Logo } from "./logo";
 function NavBar() {
   return (
     <nav className="flex justify-between bg-[#97A2D7] px-5">
-      <div className="flex flex-row justify-between items-center w-1/2 h-16 text-white text-3xl">
-        <Link href="/"><Logo size={54} /></Link>
+      <Link href="/"><Logo size={54} /></Link>
+      <div className="flex flex-row justify-around items-center w-4/6 h-16 text-white text-xl">
         <Link href="/"><p>Início</p></Link>
         <Link href="/festas"><p>Festa</p></Link>
         <Link href="/explorar"><p>Explorar</p></Link>
