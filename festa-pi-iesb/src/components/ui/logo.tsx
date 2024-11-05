@@ -1,19 +1,16 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
 
 type Props = {
-    size: number;
-}
-export const Logo = ({size}: Props) => {
-    return(
-        <Link href="/">
-            <Image
-                src={'/logo.png'}
-                alt="Logo calouro loco"
-                width={size}
-                height={size}
-                quality={100}
-            />
-        </Link>
-    )
-}
+  size: number;
+};
+export const Logo = ({ size }: Props) => {
+  return (
+    <Image
+      src={"/logo.png"}
+      alt="Logo calouro loco"
+      width={size}
+      height={size}
+      quality={100}
+    />
+  );
+};
