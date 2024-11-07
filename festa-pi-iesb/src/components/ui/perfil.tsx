@@ -1,19 +1,25 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
 import { useState } from "react";
-import { Input } from "./input";
 import { Button } from "./button";
 
 function perfil() {
-  const [nameField, setNameField] = useState("Jose Reginaldo");
-  const [emailField, setEmailField] = useState("Reginaldo@gmail.com");
-  const [passwordField, setPasswordField] = useState("123456");
+  const router = useRouter();
+  //vai ser trocado por uma requisição do banco
+  const [nameField] = useState("Jose Reginaldo");
+  const [emailField] = useState("Reginaldo@gmail.com");
+  
+  const designTailwind = "flex-1 outline-none h-full px-4 rounded-xl bg-[#eee] border-none";
+
+  const irEditar = () => {
+    router.replace("/perfil/editar");
+  };
 
   return (
     <>
-      <div className="w-screen h-screen flex justify-center items-center">
+      <div className="w-full h-full py-32 flex justify-center items-center">
         <div className="w-[38rem] mx-5 bg-white rounded-3xl">
           <div className="p-4 py-6 rounded-t-3xl bg-[#97A2D7] relative justify-center flex flex-row items-center">
             <h1 className="flex text-white text-4xl">Perfil</h1>
@@ -21,29 +27,14 @@ function perfil() {
 
           <div className="p-5">
             <div className="my-6 flex flex-col">
-              <Input
-                label="Nome:"
-                placeholder="Digite seu nome"
-                icon={faPerson}
-                value={nameField}
-                onChange={(t) => setNameField(t)}
-              />
-              <Input
-                label="Email:"
-                placeholder="Digite seu e-mail"
-                icon={faEnvelopeOpen}
-                value={emailField}
-                onChange={(t) => setEmailField(t)}
-              />
-              <Input
-                label="Senha:"
-                placeholder="Digite sua senha"
-                value={passwordField}
-                onChange={(t) => setPasswordField(t)}
-                password
-              />
+              
+                <label >Nome: </label>
+                <p className={designTailwind}>{nameField}</p>
+              
+                <label >Email: </label>
+                <p className={designTailwind}>{emailField}</p>
             </div>
-        <Button label="Atualizar dados" size={1} />
+            <Button label="Alterar Dados" onClick={irEditar} size={1} />
           </div>
         </div>
       </div>
