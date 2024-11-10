@@ -1,7 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
-import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
 import { useState } from "react";
 import { Button } from "./button";
 
