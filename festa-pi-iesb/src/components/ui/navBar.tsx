@@ -10,7 +10,6 @@ function NavBar() {
         <Link href="/festas"><p>Festa</p></Link>
         <Link href="/explorar"><p>Explorar</p></Link>
         <Link href="/amigos"><p>Amigos</p></Link>
-        <Link href="/"><p>Sair</p></Link>
       </div>
       <Link href="/perfil" className="flex items-center">
         <img src="/assets/images/profile_icon.svg" alt="" />
