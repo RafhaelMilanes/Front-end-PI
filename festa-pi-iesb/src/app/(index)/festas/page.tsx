@@ -4,20 +4,16 @@ import { SearchInput } from "@/components/ui/search-input";
 import { Ticket } from "@/components/ui/ticket";
 
 export default function page() {
-return (
+  return (
     <>
-    <NavBar />
-    <div className="flex justify-between items-center w-full px-10">
-        <h1 className="text-6xl text-white">Festas</h1>
-        <div className="w-[328px] ml-auto pt-6">
-            <SearchInput />
+      <NavBar />
+      <div className="grid grid-row items-center w-full pt-10 px-10 grid-rows-[repeat(auto-fit,minmax(50px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+        <h1 className="text-white pb-5 text-7xl">Festas</h1>
+        <div>
+          <SearchInput />
         </div>
-    </div>
-    <Ticket
-        title="Role da Baixada"
-        date="30 de Agosto de 2024"
-        value="R$ 15,00"
-    />
+      </div>
+      <Ticket/>
     </>
-);
+  );
 }
