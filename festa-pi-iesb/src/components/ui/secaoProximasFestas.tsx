@@ -24,7 +24,7 @@ function SecaoProximasFestas() {
   ];
   return (
     <section className="py-8">
-      <h2 className="text-5xl text-white  ">Próximas Festa:</h2>
+      <h2 className="ps-10 text-5xl text-white  ">Festas Próximas:</h2>
       <ul className="grid w-full grid-rows-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
         {items.map((item, index) => (
           <li className="bg-white mx-10 my-8 rounded-3xl" key={index}>
