@@ -37,6 +37,13 @@ export default function Page() {
     setTickets(newTickets);
   };
 
+  const onAcceptTicket = (ticketId: number) => {
+    const updatedTickets = tickets.map((ticket) =>
+      ticket.id === ticketId ? { ...ticket, isCompleted: true } : ticket
+    );
+    setTickets(updatedTickets);
+  };
+
   return (
     <>
       <NavBar />
@@ -51,13 +58,33 @@ export default function Page() {
       </div>
 
       <h1 className="text-4xl text-white px-10">Convites</h1>
-      {tickets.map((ticketItem) => (
-        <Ticket
-          key={ticketItem.id}
-          ticket={ticketItem}
-          onDeleteTicket={onDeleteTicket}
-        />
-      ))}
+      {tickets
+        .filter((ticket) => !ticket.isCompleted) // Exibe apenas tickets não aceitos
+        .map((ticketItem) => (
+          <Ticket
+            key={ticketItem.id}
+            ticket={ticketItem}
+            onDeleteTicket={onDeleteTicket}
+            onAcceptTicket={onAcceptTicket}
+          />
+        ))}
+
+      {/* Seção de Tickets Aceitos */}
+      <h1 className="text-4xl text-white px-10 mt-10">Já Marcadas: </h1>
+      {tickets.filter((ticket) => ticket.isCompleted).length > 0 ? (
+        tickets
+          .filter((ticket) => ticket.isCompleted) // Exibe apenas tickets aceitos
+          .map((ticketItem) => (
+            <Ticket
+              key={ticketItem.id}
+              ticket={ticketItem}
+              onDeleteTicket={onDeleteTicket}
+              onAcceptTicket={onAcceptTicket}
+            />
+          ))
+      ) : (
+        <p className="text-white px-10">Nenhum convite aceito ainda.</p>
+      )}
     </>
   );
 }

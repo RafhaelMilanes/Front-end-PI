@@ -28,10 +28,11 @@ interface TicketProps {
     isCompleted: boolean;
   };
   onDeleteTicket: (ticketId: number) => void;
+  onAcceptTicket: (ticketId: number) => void;
 }
 
-export const Ticket = ({ ticket, onDeleteTicket }: TicketProps) => {
-  const { title, date, value, description } = ticket;
+export const Ticket = ({ ticket, onDeleteTicket, onAcceptTicket }: TicketProps) => {
+  const { title, date, value, description, isCompleted } = ticket;
   const screenWidth = useScreenWidth();
 
   return (
@@ -50,23 +51,30 @@ export const Ticket = ({ ticket, onDeleteTicket }: TicketProps) => {
         </div>
 
         {/* Seção da direita (Ações) */}
-        <div className="w-[20%] bg-[#97A2D7] justify-around text-white flex items-center rounded-e-3xl">
-          <button className="flex flex-col items-center">
-            <FontAwesomeIcon
-              icon={faCheck}
-              className="text-white text-3xl"
-            />
-            <p>Aceitar</p>
-          </button>
-          <button className="flex flex-col items-center">
-            <FontAwesomeIcon
-              icon={faTimes}
-              className="text-white text-3xl"
+        {!isCompleted && ( // Exibe ações apenas se o ticket não foi aceito
+          <div className="w-[20%] bg-[#97A2D7] justify-around text-white flex items-center rounded-e-3xl">
+            <button
+              className="flex flex-col items-center"
+              onClick={() => onAcceptTicket(ticket.id)} // Ao clicar, chama onAcceptTicket
+            >
+              <FontAwesomeIcon
+                icon={faCheck}
+                className="text-white text-3xl"
+              />
+              <p>Aceitar</p>
+            </button>
+            <button
+              className="flex flex-col items-center"
               onClick={() => onDeleteTicket(ticket.id)}
-            />
-            <p>Recusar</p>
-          </button>
-        </div>
+            >
+              <FontAwesomeIcon
+                icon={faTimes}
+                className="text-white text-3xl"
+              />
+              <p>Recusar</p>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
