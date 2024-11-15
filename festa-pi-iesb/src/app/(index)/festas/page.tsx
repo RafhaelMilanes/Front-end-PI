@@ -5,6 +5,7 @@ import  Ticket  from "@/components/ui/ticket";
 import { useState } from "react";
 
 export default function page() {
+<<<<<<< HEAD
   const [ticket, setTicket] = useState([ 
     {
       id: 1,
@@ -53,6 +54,18 @@ export default function page() {
         {ticket.map((ticketItem) => (
         <Ticket key={ticketItem.id} ticket={ticketItem} onDeleteTicket={onDeleteTicket} />
       ))}
+=======
+  return (
+    <>
+      <NavBar />
+      <div className="grid grid-row items-center w-full pt-10 px-10 grid-rows-[repeat(auto-fit,minmax(50px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+        <h1 className="text-white pb-5 text-7xl">Festas</h1>
+        <div>
+          <SearchInput />
+        </div>
+      </div>
+      <Ticket/>
+>>>>>>> 1ac37b7b004c5b5b7dcb232e7e9fba0e941c3aa7
     </>
   );
 }

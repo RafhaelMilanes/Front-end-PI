@@ -34,7 +34,7 @@ export const Input = ({
     }
   };
   return (
-    <div className="mb-5">
+    <div className="">
       {label && <label className="">{label}</label>}
 
       <div className="flex items-center h-14 rounded-xl border-2 bg-[#D9D9D9] transition-colors duration-200 focus-within:border-[#97A2D7]">
