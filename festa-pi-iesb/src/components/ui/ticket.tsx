@@ -59,7 +59,7 @@ export const Ticket = () => {
                 </div>
 
                 {/* Parte Direita */}
-                <div className="w-[20%] bg-[#97A2D7] justify-around	 text-white flex justify-center items-center rounded-e-3xl">
+                <div className="w-[20%] bg-[#97A2D7] justify-around	 text-white flex items-center rounded-e-3xl">
                   <button className="flex flex-col items-center">
                     <FontAwesomeIcon
                       icon={faCheck}
