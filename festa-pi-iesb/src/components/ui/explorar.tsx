@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { FestasContext } from "@/context/FestaContext";
 
 export const useScreenWidth = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -18,36 +19,9 @@ export const useScreenWidth = () => {
 };
 
 export const Explorar = () => {
-  const items = [
-    {
-      title: "Festa de Bulano",
-      date: "18 de Novembro de 2024",
-      value: "R$ 300,00",
-      description:
-        "Descrição: Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-    },
-    {
-      title: "Furacão 2000",
-      date: "18 de Novembro de 2024",
-      value: "R$ 35,00",
-      description:
-        "Descrição: Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-    },
-    {
-      title: "Oktoberfest",
-      date: "30 de Agosto de 2024",
-      value: "R$ 150,00",
-      description:
-        "Descrição: Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-    },
-    {
-      title: "Otakolândia",
-      date: "30 de Agosto de 2024",
-      value: "R$ 300,00",
-      description:
-        "Descrição: Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-    },
-  ];
+
+  const context = useContext(FestasContext);
+  useEffect(() => {context?.carregar()}, [])
 
   const tamanhoTela = useScreenWidth();
 
@@ -55,19 +29,19 @@ export const Explorar = () => {
     <>
       {tamanhoTela > 735 ? (
         <ul>
-          {items.map((item, index) => (
+          {context?.Festas.map((item, index) => (
             <li className="w-full mb-8 px-10" key={index}>
               <div className="flex justify-center w-full">
                 {/* Parte Esquerda */}
                 <div className="w-[20%] py-3 flex-col bg-[#97A2D7] text-white flex justify-center items-start px-8 rounded-s-3xl">
-                  <p className="text-2xl">{item.title}</p>
-                  <p className="text-sm">{item.date}</p>
-                  <p>Valor: {item.value}</p>
+                  <p className="text-2xl">{item.nome}</p>
+                  <p className="text-sm">{item.data}</p>
+                  <p>Valor: {item.valor}</p>
                 </div>
 
                 {/* Parte Central */}
                 <div className="w-[60%] bg-white flex justify-start items-start px-3">
-                  <p>{item.description}</p>
+                  <p>{item.descricao}</p>
                 </div>
 
                 {/* Parte Direita */}
@@ -82,19 +56,19 @@ export const Explorar = () => {
         </ul>
       ) : (
         <ul>
-          {items.map((item, index) => (
+          {context?.Festas.map((item, index) => (
             <li className="w-full px-10 py-5" key={index}>
               <div className="">
                 {/* Parte Top Mobile*/}
                 <div className="flex flex-col items-center bg-[#97A2D7] text-white py-4 rounded-t-3xl">
-                  <p className="text-2xl">{item.title}</p>
-                  <p className="text-sm">{item.date}</p>
-                  <p>Valor: {item.value}</p>
+                  <p className="text-2xl">{item.nome}</p>
+                  <p className="text-sm">{item.data}</p>
+                  <p>Valor: {item.valor}</p>
                 </div>
 
                 {/* Parte Central Mobile*/}
                 <div className="bg-white py-4 px-3">
-                  <p>{item.description}</p>
+                  <p>{item.descricao}</p>
                 </div>
 
                 {/* Parte Down Mobile*/}
