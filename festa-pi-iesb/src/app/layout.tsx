@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { FestasProvider } from "@/context/FestaContext";
 
 export const metadata: Metadata = {
-  title: "Calouro loco",
+  title: "Social Party",
   description: "Encontre o desande da calourada",
 };
 
@@ -13,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>
-        {children}
-      </body>
+        <body><FestasProvider>{children}</FestasProvider></body>
     </html>
   );
 }

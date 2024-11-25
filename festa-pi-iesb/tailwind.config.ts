@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        background: "#e9d9d9",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        itim: ["itim"]
+      }
     },
   },
   plugins: [],

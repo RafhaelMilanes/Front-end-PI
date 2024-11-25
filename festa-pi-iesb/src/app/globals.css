@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 body {
-  font-family: "Rubik", sans-serif;
-  font-size: 16px;
+  font-family: "itim", sans-serif;
+  font-size: 18px;
   background-color: #e9d9d9;
   color: #97a2d7;
+}
+
+@font-face {
+  font-family: "itim";
+  font-style: normal;
+  font-display: swap;
+  src: url(../../public/assets/fonts/Itim-Regular.ttf) format("TrueType");
 }
