@@ -19,14 +19,11 @@ const useScreenWidth = () => {
   return screenWidth;
 };
 
-function Imagem() {
+function Imagem(props) {
   const item = {
-    title: "Role da Baixada",
-    date: "30 de Agosto de 2024",
+    title: props.titulo,
+    date: props.data,
     imagem: "/assets/images/Imagem.png",
-    value: "R$ 15,00",
-    description:
-      "Descrição: Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
   };
 
   const tamanhoTela = useScreenWidth();
@@ -42,7 +39,7 @@ function Imagem() {
             <h2 className="text-2xl">{item.date}</h2>
           </div>
         ) : (
-          <div className=" px-8">
+          <div className="mt-6 px-8">
             <h1 className="text-5xl">{item.title}</h1>
             <h2 className="text-2xl">{item.date}</h2>
           </div>
