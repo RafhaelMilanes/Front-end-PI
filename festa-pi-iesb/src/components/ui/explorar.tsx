@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState, useContext } from "react";
 import { FestasContext } from "@/context/FestaContext";
 
@@ -46,9 +47,9 @@ export const Explorar = () => {
 
                 {/* Parte Direita */}
                 <div className="w-[10%] bg-[#97A2D7] justify-around	 text-white flex justify-center items-center rounded-e-3xl">
-                  <button className="flex flex-col items-center">
+                  <Link href={`/festa/dashboard?a=${item.id}`} className="flex flex-col items-center">
                     <p>Comprar ingresso</p>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </li>
