@@ -31,6 +31,7 @@ function FestasProvider({ children }: FestasProviderProps) {
   };
 
   const carregar = async (): Promise<void> => {
+    setFestas([])
     const resposta = await buscarTodos();
     if (resposta.sucesso) {
       setFestas(resposta.dados);
@@ -40,10 +41,11 @@ function FestasProvider({ children }: FestasProviderProps) {
   };
 
   const carregarUm = async (id: string): Promise<void> => {
+    setFestas([])
     const resposta = await buscarUm(id);
 
     if (resposta.sucesso) {
-        setFestas([resposta.dados]);
+        setFestas(resposta.dados);
      } else {
         setErro(resposta.mensagem);
      }
