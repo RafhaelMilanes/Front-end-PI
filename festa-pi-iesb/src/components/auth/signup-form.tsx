@@ -1,21 +1,33 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Input } from "../ui/input";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "../ui/button";
 import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
 import Link from "next/link";
+import { AuthContext } from "@/context/AuthContext";
 
 export const SignupForm = () => {
   const router = useRouter();
   const [nameField, setNameField] = useState("");
   const [emailField, setEmailField] = useState("@gmail.com");
   const [passwordField, setPasswordField] = useState("");
+  const [msg, setMsg] = useState("");
 
-  const handleEnterButton = () => {
-    router.replace("/home");
+  const context = useContext(AuthContext);
+
+  const handleEnterButton = async () => {
+    const user = { nome: nameField, email: emailField, senha: passwordField };
+    setMsg("");
+
+    const erro = await context?.registrar(user);
+    if (erro) {
+      setMsg(erro);
+    } else {
+      router.replace("/");
+    }
   };
   return (
     <>

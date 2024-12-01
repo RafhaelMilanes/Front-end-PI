@@ -7,13 +7,13 @@ function autenticar(dados) {
       password: dados.senha,
     })
     .then((response) => {
-      return { sucesso: true, dados: response.data };
+      return { sucesso: true, dados: response.data, msg: "" };
     })
     .catch((error) => {
       if (error.response) {
-        return { sucesso: false, msg: error.response.data };
+        return { sucesso: false, msg: error.response.data, dados: {} };
       } else {
-        return { sucesso: false, msg: error.message };
+        return { sucesso: false, msg: error.message, dados: {} };
       }
     });
 }
@@ -21,13 +21,14 @@ function autenticar(dados) {
 function cadastrar(dados) {
   return axios
     .post("http://localhost:3000/register", {
+      nome: dados.nome,
       email: dados.email,
       password: dados.senha,
       festas:[],
       amigos:[],
     })
     .then((response) => {
-      return { sucesso: true, dados: response.data };
+      return { sucesso: true, msg: "", dados: response.data };
     })
     .catch((error) => {
       return { sucesso: falso, msg: error.message };
@@ -40,7 +41,7 @@ function alterar(dados) {
     password: dados.senha,
   })
   .then((response) => {
-    return { sucesso: true, dados: response.data };
+    return { sucesso: true, msg: "", dados: response.data };
   })
   .catch((error) => {
     if (error.response) {

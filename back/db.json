@@ -1,5 +1,14 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "Pedro@gmail.com",
+      "password": "$2a$10$URpPKK.lZQc6chGob/1Meuv.GePG7s.9Hgy6fnkutoiqG0thWxpNq",
+      "nome": "",
+      "festas": [],
+      "amigos": [],
+      "id": 1
+    }
+  ],
   "festas": [
     {
       "nome": "Festival de Música",
@@ -15,7 +24,12 @@
       "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
       "valor": 230,
       "organizador": "123",
-      "participantes": ["1", "2", "3", "4"],
+      "participantes": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "id": 1
     },
     {
