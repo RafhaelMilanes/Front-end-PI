@@ -37,7 +37,7 @@ export const Ticket = ({ onTicketAccepted }) => {
         "Descrição: Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam...",
     },
     {
-      title: "Chora Boy",
+      title: "Chora",
       date: "30 de Agosto de 2024",
       value: "R$ 15,00",
       description:
@@ -162,7 +162,7 @@ export const Ticket = ({ onTicketAccepted }) => {
       {/* Exibe os ingressos aceitos */}
       <div className="pt-10">
         <div className="items-center w-full pt-10 px-10 grid-rows-[repeat(auto-fit,minmax(50px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
-          <h1 className="text-white text-3xl">Meus Ingressos Aceitos</h1>
+          <h1 className="text-white pb-5 text-7xl">Seus Ingressos</h1>
           <ul>
             {acceptedTickets.map((ticket, index) => (
               <li
