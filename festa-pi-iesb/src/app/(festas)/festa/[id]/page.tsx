@@ -15,8 +15,8 @@ function Page() {
     descricao: "",
     regras: [],
     participantes: [],
-    organizadores: [],
-    valor: 0
+    organizador: [],
+    valor: 0,
   });
 
   const carregarUm = async (festaId: string): Promise<void> => {
@@ -49,9 +49,17 @@ function Page() {
       </section>
       <section className="px-8 mt-20">
         <h2 className="text-4xl mb-4">Participantes</h2>
+        <p>
+          {festa.participantes.map((item, index) => (
+            <li key={index} className="list-disc mx-5">
+              {[item]}
+            </li>
+          ))}
+        </p>
       </section>
       <section className="px-8 mt-20">
         <h2 className="text-4xl mb-4">Organizadores</h2>
+        <p>{festa.organizador}</p>
       </section>
       <section className="px-8 mt-20">
         <h2 className="text-4xl mb-4">Valor</h2>
