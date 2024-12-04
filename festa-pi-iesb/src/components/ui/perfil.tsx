@@ -2,14 +2,28 @@
 
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Input } from "./input";
 import { Button } from "./button";
+import { AuthContext } from "@/context/AuthContext";
 
 function perfil() {
-  const [nameField, setNameField] = useState("Jose Reginaldo");
-  const [emailField, setEmailField] = useState("Reginaldo@gmail.com");
-  const [passwordField, setPasswordField] = useState("123456");
+  const context = useContext(AuthContext);
+  const [nameField, setNameField] = useState(context?.usuario?.email);
+  const [emailField, setEmailField] = useState(context?.usuario?.email);
+  const [passwordField, setPasswordField] = useState("");
+
+  function enviar() {
+    if (passwordField === "") {
+      return context?.atualizar({ nome: nameField, email: emailField });
+    } else {
+      return context?.atualizarSenha({
+        nome: nameField,
+        email: emailField,
+        password: passwordField,
+      });
+    }
+  }
 
   return (
     <>
@@ -43,7 +57,7 @@ function perfil() {
                 password
               />
             </div>
-            <Button label="Atualizar Dados" size={1} />
+            <Button label="Atualizar Dados" size={1} onClick={enviar} />
           </div>
         </div>
       </div>

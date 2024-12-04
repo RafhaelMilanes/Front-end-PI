@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
 import Link from "next/link";
 import { AuthContext } from "@/context/AuthContext";
+import { InputSenha } from "../ui/inputEmail";
 
 export const SignupForm = () => {
   const router = useRouter();
@@ -38,7 +39,7 @@ export const SignupForm = () => {
         value={nameField}
         onChange={(t) => setNameField(t)}
       />
-      <Input
+      <InputSenha
         label="Email:"
         placeholder="Digite seu e-mail"
         icon={faEnvelopeOpen}
@@ -52,7 +53,7 @@ export const SignupForm = () => {
         onChange={(t) => setPasswordField(t)}
         password
       />
-      <div className="flex justify-center items-center self-end mt-[-20px] md:flex-row">
+      <div className="flex justify-center items-center self-end md:flex-row">
         <div className="text-gray-500">Já tem uma conta?</div>
         <Link href={"/signin"} className="hover:underline">
           Entrar

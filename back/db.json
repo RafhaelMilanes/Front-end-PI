@@ -2,119 +2,75 @@
   "users": [
     {
       "email": "Pedro@gmail.com",
-      "password": "$2a$10$URpPKK.lZQc6chGob/1Meuv.GePG7s.9Hgy6fnkutoiqG0thWxpNq",
-      "nome": "",
+      "password": "$2a$10$9B9ix7aMtdbHO8oC0HHaK.bpphhRdtUbSRRSzZTDsIg07OAfVjXSy",
+      "nome": "Pedro",
+      "festas": [
+        1
+      ],
+      "amigos": [
+        2
+      ],
+      "id": 1
+    },
+    {
+      "email": "Rafhael@gmail.com",
+      "password": "$2a$10$HYuBjkWYFDzMLUvXLf.YROBBAkmJGlxkbn2fznl0YaQ7UQdXnRAb6",
+      "nome": "Rafhael",
+      "festas": [],
+      "amigos": [
+        1
+      ],
+      "id": 2
+    },
+    {
+      "email": "yago@gmail.com",
+      "password": "$2a$10$u1yOCbQiTP6haaQPXRbYRuNe91h3adLn9z0snUnYd/MPUyU1wgLc6",
+      "nome": "Yago",
       "festas": [],
       "amigos": [],
-      "id": 1
+      "id": 3
+    },
+    {
+      "email": "joao@gmail.com",
+      "password": "$2a$10$vYuu/CQ15sj7QD2ELq0sS.eJZ6BUBkmjl3NLvh5G5Oe7RyP1q.w82",
+      "nome": "joao",
+      "festas": [],
+      "amigos": [],
+      "id": 4
     }
   ],
   "festas": [
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Festa 1",
+      "data": "10/12/24",
       "regras": [
-        "regra1",
-        "regra2",
-        "regra3",
-        "regra1",
-        "regra2",
-        "regra3"
+        "Indentidade em mãos",
+        "Não levar Bebida",
+        "Para maiores de 16 Anos"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "organizador": "123",
+      "descricao": "ajkfbasoifbfipqoiafbsufaisbfa ofiawfnuaac auba v8svbwev sdn ubgnweuf wvuvb whv",
+      "valor": 260,
+      "organizador": 2,
       "participantes": [
-        "1",
-        "2",
-        "3",
-        "4"
+        1
       ],
+      "convidados": [],
       "id": 1
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Festa 2",
+      "data": "10/12/24",
       "regras": [
-        "",
-        "",
-        ""
+        "Indentidade em mãos",
+        "Não levar Bebida",
+        "Para maiores de 16 Anos"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "ajkfbasoifbfipqoiafbsufaisbfa ofiawfnuaac auba v8svbwev sdn ubgnweuf wvuvb whv",
+      "valor": 260,
+      "organizador": 2,
+      "participantes": [],
+      "convidados": [],
       "id": 2
-    },
-    {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
-      "regras": [
-        "",
-        "",
-        ""
-      ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "id": 3
-    },
-    {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
-      "regras": [
-        "",
-        "",
-        ""
-      ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "id": 4
-    },
-    {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
-      "regras": [
-        "",
-        "",
-        ""
-      ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "id": 5
-    },
-    {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
-      "regras": [
-        "",
-        "",
-        ""
-      ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "id": 6
-    },
-    {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
-      "regras": [
-        "",
-        "",
-        ""
-      ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "id": 7
-    },
-    {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
-      "regras": [
-        "",
-        "",
-        ""
-      ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
-      "id": 8
     }
   ]
 }

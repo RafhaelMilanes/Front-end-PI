@@ -24,8 +24,8 @@ function cadastrar(dados) {
       nome: dados.nome,
       email: dados.email,
       password: dados.senha,
-      festas:[],
-      amigos:[],
+      festas: [],
+      amigos: [],
     })
     .then((response) => {
       return { sucesso: true, msg: "", dados: response.data };
@@ -35,21 +35,40 @@ function cadastrar(dados) {
     });
 }
 
-function alterar(dados) {
-  return axios.patch(`http://localhost:3000/login/${dados.id}`, {
-    email: dados.email,
-    password: dados.senha,
-  })
-  .then((response) => {
-    return { sucesso: true, msg: "", dados: response.data };
-  })
-  .catch((error) => {
-    if (error.response) {
-      return { sucesso: false, msg: error.response.data };
-    } else {
-      return { sucesso: false, msg: error.message };
-    }
-  });
+function alterarSenha(dados) {
+  return axios
+    .patch(`http://localhost:3000/login/${dados.id}`, {
+      nome: dados.nome,
+      email: dados.email,
+      password: dados.senha,
+    })
+    .then((response) => {
+      return { sucesso: true, msg: "", dados: response.data };
+    })
+    .catch((error) => {
+      if (error.response) {
+        return { sucesso: false, msg: error.response.data };
+      } else {
+        return { sucesso: false, msg: error.message };
+      }
+    });
 }
 
-export { autenticar, cadastrar, alterar };
+function alterar(dados) {
+  return axios
+    .patch(`http://localhost:3000/login/${dados.id}`, {
+      nome: dados.nome,
+      email: dados.email,
+    })
+    .then((response) => {
+      return { sucesso: true, msg: "", dados: response.data };
+    })
+    .catch((error) => {
+      if (error.response) {
+        return { sucesso: false, msg: error.response.data };
+      } else {
+        return { sucesso: false, msg: error.message };
+      }
+    });
+}
+export { autenticar, cadastrar, alterar, alterarSenha };

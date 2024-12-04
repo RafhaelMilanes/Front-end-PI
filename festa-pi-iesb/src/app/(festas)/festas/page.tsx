@@ -2,8 +2,21 @@
 import NavBar from "@/components/ui/navBar";
 import { SearchInput } from "@/components/ui/search-input";
 import { Ticket } from "@/components/ui/ticket";
+import { TicketFestasParticipando } from "@/components/ui/ticketFestasParticipando";
+import { AuthContext } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
+import { useContext, useEffect } from "react";
 
 export default function page() {
+  const router = useRouter();
+  const contextUser = useContext(AuthContext)
+/*{
+  useEffect(() => {
+    if (contextUser?.usuario === null) {
+      router.push("/")
+    }
+  }, [])
+}*/
   return (
     <>
       <NavBar />
@@ -13,7 +26,10 @@ export default function page() {
           <SearchInput />
         </div>
       </div>
+      <h2 className="px-10 text-white text-5xl py-8">Convites</h2>
       <Ticket/>
+      <h2 className="px-10 text-white text-5xl py-8">Já Marcadas</h2>
+      <TicketFestasParticipando/>
     </>
   );
 }
