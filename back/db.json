@@ -1,4 +1,14 @@
 {
+  "users": [
+    {
+      "email": "Pedro@gmail.com",
+      "password": "$2a$10$URpPKK.lZQc6chGob/1Meuv.GePG7s.9Hgy6fnkutoiqG0thWxpNq",
+      "nome": "",
+      "festas": [],
+      "amigos": [],
+      "id": 1
+    }
+  ],
   "festas": [
     {
       "nome": "Festival de Verão",
@@ -8,10 +18,15 @@
         "Uso de máscara durante as apresentações",
         "Proibido consumir bebidas alcoólicas no palco"
       ],
-      "descricao": "O Festival de Verão é um evento anual que celebra a música e a cultura local. Com apresentações de artistas emergentes e renomados, é uma oportunidade imperdível para os amantes da música.",
-      "valor": 150,
-      "organizador": "Música Eventos Ltda",
-      "participantes": ["Alice", "Carlos", "Juliana", "Marcelo"],
+      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
+      "valor": 230,
+      "organizador": "123",
+      "participantes": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "id": 1
     },
     {
