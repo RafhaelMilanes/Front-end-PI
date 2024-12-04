@@ -1,99 +1,115 @@
 {
   "festas": [
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Festival de Verão",
+      "data": "20/12/24",
       "regras": [
-        "",
-        "",
-        ""
+        "Inscrição obrigatória",
+        "Uso de máscara durante as apresentações",
+        "Proibido consumir bebidas alcoólicas no palco"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "O Festival de Verão é um evento anual que celebra a música e a cultura local. Com apresentações de artistas emergentes e renomados, é uma oportunidade imperdível para os amantes da música.",
+      "valor": 150,
+      "organizador": "Música Eventos Ltda",
+      "participantes": ["Alice", "Carlos", "Juliana", "Marcelo"],
       "id": 1
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Maratona Cidade do Rio",
+      "data": "14/01/25",
       "regras": [
-        "",
-        "",
-        ""
+        "É necessário ser maior de 18 anos",
+        "Inscrição prévia obrigatória",
+        "Camiseta oficial obrigatória"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "A maratona que percorre os pontos turísticos do Rio de Janeiro, trazendo corredores de todo o mundo para esta grande celebração esportiva.",
+      "valor": 100,
+      "organizador": "Eventos Rio",
+      "participantes": ["Lucas", "Fernanda", "Pedro", "Sofia"],
       "id": 2
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Feira Gastronômica Internacional",
+      "data": "10/02/25",
       "regras": [
-        "",
-        "",
-        ""
+        "Respeitar os horários de visitação",
+        "Proibido levar alimentos de fora",
+        "Uso de crachá obrigatório"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "Uma das maiores feiras de gastronomia, com chefs renomados e pratos de várias partes do mundo. Uma experiência única para os apaixonados por comida.",
+      "valor": 80,
+      "organizador": "Feira Gourmet Ltda",
+      "participantes": ["Bruna", "André", "Camila", "Renato"],
       "id": 3
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Festival de Cinema Brasileiro",
+      "data": "05/03/25",
       "regras": [
-        "",
-        "",
-        ""
+        "Entrada gratuita para estudantes",
+        "É necessário comprovar residência no Brasil para inscrições",
+        "Cada pessoa pode submeter apenas um filme"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "Um evento para valorizar a produção cinematográfica nacional, com exibição de filmes independentes e grandes lançamentos do cinema brasileiro.",
+      "valor": 50,
+      "organizador": "Cinema Brasil",
+      "participantes": ["Rafael", "Luiza", "Rodrigo", "Patrícia"],
       "id": 4
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Encontro de Tecnologia 2025",
+      "data": "22/03/25",
       "regras": [
-        "",
-        "",
-        ""
+        "Pré-inscrição obrigatória",
+        "Acesso restrito a maiores de 16 anos",
+        "Proibido o uso de celulares durante as palestras"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "Um evento focado nas inovações tecnológicas que estão transformando o mercado. Palestras, workshops e exposições de empresas do setor.",
+      "valor": 250,
+      "organizador": "Tech World",
+      "participantes": ["Marcos", "Daniela", "Felipe", "Gustavo"],
       "id": 5
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Bienal do Livro de São Paulo",
+      "data": "01/04/25",
       "regras": [
-        "",
-        "",
-        ""
+        "Proibido fotografar os livros raros",
+        "É necessário registro para autógrafos",
+        "Uso de máscara obrigatório"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "A maior feira literária da América Latina, com expositores de editoras de todo o mundo e presença de autores renomados em lançamentos e palestras.",
+      "valor": 60,
+      "organizador": "Bienal SP",
+      "participantes": ["Luciana", "Felipe", "Tânia", "Vera"],
       "id": 6
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Festival de Música Eletrônica",
+      "data": "15/05/25",
       "regras": [
-        "",
-        "",
-        ""
+        "Proibido o uso de substâncias ilícitas",
+        "É obrigatório apresentar identidade no ingresso",
+        "Não é permitido entrar após as 22h"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "O maior evento de música eletrônica do país, com DJs de renome mundial e experiências imersivas para os fãs do gênero.",
+      "valor": 350,
+      "organizador": "Electro Beat",
+      "participantes": ["Marina", "Pedro", "Guilherme", "Laura"],
       "id": 7
     },
     {
-      "nome": "Festival de Música",
-      "data": "31/12/24",
+      "nome": "Concurso de Startups 2025",
+      "data": "30/06/25",
       "regras": [
-        "",
-        "",
-        ""
+        "A equipe deve ter pelo menos 2 fundadores",
+        "É necessário apresentar um protótipo funcional",
+        "Inscrição até o final de maio"
       ],
-      "descricao": "Lorem ipsum dolor sit amet. Ut reprehenderit quidem ut soluta nesciunt a explicabo nihil eum fuga nisi qui aspernatur laboriosam qui pariatur accusamus est similique quia. Vel quis officiis et repellat voluptatem qui culpa voluptatibus. Vel dolor labore aut nisi voluptas sit eaque similique vel iure facere ea molestias veritatis qui nulla ullam. ",
-      "valor": 230,
+      "descricao": "Concurso anual que reúne as melhores startups inovadoras do Brasil. Vagas para financiamento e mentorias para as ideias mais promissoras.",
+      "valor": 0,
+      "organizador": "Startup Brasil",
+      "participantes": ["Ana", "Paulo", "Júlia", "Tiago"],
       "id": 8
     }
   ]

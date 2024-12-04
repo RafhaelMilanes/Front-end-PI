@@ -13,7 +13,7 @@ function buscarTodos() {
 };
 
 function buscarUm(id) {
-  return axios.get(`${url}/${id}`)
+  return axios.get(`${url}/festas/${id}`)
   .then((response) => {
       return { sucesso: true, dados: response.data, mensagem: "" };
   })
@@ -30,6 +30,8 @@ function adicionar(dados) {
       regras: dados.regras,
       descricao: dados.descricao,
       valor: dados.valor,
+      organizador: dados.organizador,
+      participantes: dados.participantes
     })
     .then((response) => {
       return { sucesso: true, dados: response.data, mensagem: "" };
