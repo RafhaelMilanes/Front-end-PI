@@ -1,4 +1,5 @@
 "use client";
+import { Amigos } from "@/components/ui/amigos";
 import NavBar from "@/components/ui/navBar";
 import { SearchInput } from "@/components/ui/search-input";
 import { Ticket } from "@/components/ui/ticket";
