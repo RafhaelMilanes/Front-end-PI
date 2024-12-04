@@ -74,9 +74,9 @@ export const Explorar = () => {
 
                 {/* Parte Down Mobile*/}
                 <div className="flex flex-row justify-evenly items-center bg-[#97A2D7] text-white py-4 rounded-b-3xl">
-                  <button className="flex flex-col items-center">
+                  <Link href={`/festa/dashboard?a=${item.id}`}  className="flex flex-col items-center">
                     <p>Comprar ingresso</p>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </li>

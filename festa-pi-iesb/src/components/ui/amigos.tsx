@@ -1,4 +1,8 @@
-import { useEffect, useState } from "react";
+"use client"
+import { AmigosContext } from "@/context/AmigosContext";
+import { AuthContext } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
+import { useContext, useEffect, useState } from "react";
 
 export const useScreenWidth = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -18,22 +22,29 @@ export const useScreenWidth = () => {
 };
 
 export const Amigos = () => {
-  const items = [
+  const router = useRouter()
+  const tamanhoTela = useScreenWidth();
+
+  var items = [
     {
-      nomeAmizade: "João damassa",
-      amizade: "32",
-      description:
-        "Rebolation 2024",
-    },
-    {
-      nomeAmizade: "Jorgim da 12",
-      amizade: "12",
-      description:
-        "Pisadinha 389",
+      id: 0,
+      festas: [],
+      nome: "",
+      email: "",
+      amigos: [],
     },
   ];
 
-  const tamanhoTela = useScreenWidth();
+  const contextUser = useContext(AuthContext);
+  const contextAmigos = useContext(AmigosContext);
+
+  const userId = contextUser?.usuario?.id
+
+  useEffect(() => {
+    contextAmigos?.carregarAmigos(userId);
+  }, []);
+
+  items = contextAmigos?.amigos;
 
   return (
     <>
@@ -44,14 +55,15 @@ export const Amigos = () => {
               <div className="flex justify-center w-full">
                 {/* Parte Esquerda */}
                 <div className="w-[30%] py-3 flex-col bg-[#97A2D7] text-white flex justify-center items-start px-8 rounded-s-3xl">
-                  <p className="text-2xl">{item.nomeAmizade}</p>
-                  <p className="text-sm">{item.amizade} amigos em comum</p>
+                  <p className="text-2xl">{item.nome}</p>
+                  <p className="text-sm">
+                    {item.amigos.length} amigos em comum
+                  </p>
                 </div>
 
                 {/* Parte Central */}
-                <div className="w-[50%] bg-white flex flex-col justify-start items-start px-3  rounded-e-3xl">
+                <div className="w-[50%] bg-[#97A2D7] flex flex-col justify-start items-start px-3  rounded-e-3xl">
                   <h3>Confirmado para:</h3>
-                  <p>{item.description}</p>
                 </div>
               </div>
             </li>
@@ -64,14 +76,14 @@ export const Amigos = () => {
               <div className="">
                 {/* Parte Top Mobile*/}
                 <div className="flex flex-col items-center bg-[#97A2D7] text-white py-4 rounded-t-3xl">
-                  <p className="text-2xl">{item.nomeAmizade}</p>
-                  <p className="text-sm">{item.amizade} amigos em comum</p>
+                  <p className="text-2xl">{item.nome}</p>
+                  <p className="text-sm">{item.amigos.length} amigos em comum</p>
                 </div>
 
                 {/* Parte Central Mobile*/}
-                <div className="bg-white py-4 px-3">
+                <div className="bg-[#97A2D7] py-4 px-3 rounded-b-3xl">
                   <h3>Confirmado para:</h3>
-                  <p>{item.description}</p>
+                  <p>{item.festas}</p>
                 </div>
               </div>
             </li>
