@@ -8,7 +8,7 @@ function NavBar() {
       <div className="flex flex-row justify-around items-center w-4/6 h-16 text-white text-xl">
         <Link href="/home"><p>Início</p></Link>
         <Link href="/festas"><p>Festa</p></Link>
-        <Link href="/explorar"><p>Explorar</p></Link>
+        <Link href="/explorar/dashboard?a="><p>Explorar</p></Link>
         <Link href="/amigos"><p>Amigos</p></Link>
       </div>
       <Link href="/perfil" className="flex items-center">
