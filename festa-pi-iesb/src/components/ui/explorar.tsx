@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState, useContext } from "react";
 import { FestasContext } from "@/context/FestaContext";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export const useScreenWidth = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -20,41 +20,16 @@ export const useScreenWidth = () => {
   return screenWidth;
 };
 
-export const Explorar = () => {
+export const Explorar = (props) => {
   const router = useRouter();
-
   const tamanhoTela = useScreenWidth();
-
-  const contextFesta = useContext(FestasContext);
-
-  const [festas, setFestas] = useState<object[]>([]);
-  const [erro, setErro] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    const fetchFestasParticipando = async () => {
-      if (contextFesta) {
-        try {
-          const resposta = await contextFesta.carregar();
-          if (resposta) {
-            setFestas(resposta);
-            setErro(undefined);
-          } else {
-            setErro("Não foi possível buscar as festas.");
-          }
-        } catch (error) {
-          setErro("Ocorreu um erro ao buscar as festas.");
-        }
-      }
-    };
-    fetchFestasParticipando();
-  }, [contextFesta]);
 
   return (
     <>
       {tamanhoTela > 735 ? (
         <ul>
-          {festas.map((item, index) => (
-            <li className="w-full mb-8 px-10" key={index}>
+          {props.festas.map((item, index) => (
+            <li className="w-full my-8" key={index}>
               <div className="flex justify-center w-full">
                 {/* Parte Esquerda */}
                 <div className="w-[20%] py-3 flex-col bg-[#97A2D7] text-white flex justify-center items-start px-8 rounded-s-3xl">
@@ -83,7 +58,7 @@ export const Explorar = () => {
         </ul>
       ) : (
         <ul>
-          {festas.map((item, index) => (
+          {props.festas.map((item, index) => (
             <li className="w-full px-10 py-5" key={index}>
               <div className="">
                 {/* Parte Top Mobile*/}

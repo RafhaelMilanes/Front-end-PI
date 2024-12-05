@@ -6,12 +6,12 @@
       "nome": "Pedro",
       "festas": [
         1,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
       ],
       "amigos": [
         2
@@ -22,9 +22,15 @@
       "email": "Rafhael@gmail.com",
       "password": "$2a$10$HYuBjkWYFDzMLUvXLf.YROBBAkmJGlxkbn2fznl0YaQ7UQdXnRAb6",
       "nome": "Rafhael",
-      "festas": [],
+      "festas": [
+        1,
+        2,
+        5,
+        6
+      ],
       "amigos": [
-        1
+        1,
+        5
       ],
       "id": 2
     },
@@ -33,9 +39,9 @@
       "password": "$2a$10$u1yOCbQiTP6haaQPXRbYRuNe91h3adLn9z0snUnYd/MPUyU1wgLc6",
       "nome": "Yago",
       "festas": [
-        19,
-        20,
-        21
+        3,
+        4,
+        7
       ],
       "amigos": [],
       "id": 3
@@ -43,349 +49,293 @@
     {
       "email": "joao@gmail.com",
       "password": "$2a$10$vYuu/CQ15sj7QD2ELq0sS.eJZ6BUBkmjl3NLvh5G5Oe7RyP1q.w82",
-      "nome": "joao",
-      "festas": [],
+      "nome": "João",
+      "festas": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
       "amigos": [],
       "id": 4
+    },
+    {
+      "email": "Luan@gmail.com",
+      "password": "$2a$10$Xn7U3q.XB4mxsOc/hp9G0u01JF6FfGWi8.cEAYtGVW/tm1iAecjyW",
+      "nome": "Luan",
+      "festas": [
+        1
+      ],
+      "amigos": [
+        2
+      ],
+      "id": 5
     }
   ],
   "festas": [
     {
-      "nome": "Festa 1",
-      "data": "10/12/24",
+      "id": 1,
+      "nome": "Festa na Piscina",
+      "descricao": "Uma festa divertida na piscina com churrasco e música ao vivo.",
+      "valor": 50,
       "regras": [
-        "Indentidade em mãos",
-        "Não levar Bebida",
-        "Para maiores de 16 Anos"
+        "Trazer roupa de banho",
+        "Não trazer bebidas alcoólicas",
+        "Respeitar os horários"
       ],
-      "descricao": "ajkfbasoifbfipqoiafbsufaisbfa ofiawfnuaac auba v8svbwev sdn ubgnweuf wvuvb whv",
-      "valor": 260,
+      "data": "2025-12-10",
+      "organizador": 1,
+      "participantes": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "convidados": [
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Festa de Aniversário",
+      "descricao": "Celebração do aniversário com comida, bebida e diversão.",
+      "valor": 30,
+      "regras": [
+        "Trazer presente",
+        "Confirmar presença antecipadamente"
+      ],
+      "data": "2025-12-20",
+      "organizador": 1,
+      "participantes": [
+        1,
+        2,
+        4
+      ],
+      "convidados": [
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Festa de Ano Novo",
+      "descricao": "Celebração de Ano Novo com fogos de artifício e ceia especial.",
+      "valor": 100,
+      "regras": [
+        "Vestir branco",
+        "Trazer uma garrafa de champanhe"
+      ],
+      "data": "2025-12-31",
+      "organizador": 1,
+      "participantes": [
+        1,
+        3,
+        4
+      ],
+      "convidados": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Festa de Natal",
+      "descricao": "Ceia de Natal com troca de presentes e amigo secreto.",
+      "valor": 80,
+      "regras": [
+        "Trazer um prato de comida",
+        "Participar do amigo secreto"
+      ],
+      "data": "2025-12-24",
       "organizador": 2,
       "participantes": [
-        1
+        2,
+        3
       ],
-      "convidados": [],
-      "id": 1
+      "convidados": [
+        4
+      ]
     },
     {
-      "nome": "Festa 2",
-      "data": "10/12/24",
+      "id": 5,
+      "nome": "Festa de Carnaval",
+      "descricao": "Festa de Carnaval com blocos de rua e desfile de fantasias.",
+      "valor": 70,
       "regras": [
-        "Indentidade em mãos",
-        "Não levar Bebida",
-        "Para maiores de 16 Anos"
+        "Usar fantasia",
+        "Não trazer bebidas de fora"
       ],
-      "descricao": "ajkfbasoifbfipqoiafbsufaisbfa ofiawfnuaac auba v8svbwev sdn ubgnweuf wvuvb whv",
-      "valor": 260,
+      "data": "2025-02-20",
       "organizador": 2,
-      "participantes": [],
-      "convidados": [],
-      "id": 2
+      "participantes": [
+        2,
+        4
+      ],
+      "convidados": [
+        3
+      ]
     },
     {
-      "nome": "Festa 3",
-      "data": "2024-12-20",
+      "id": 6,
+      "nome": "Festa Junina",
+      "descricao": "Arraiá com comidas típicas, quadrilha e fogueira.",
+      "valor": 25,
       "regras": [
-        "Identida",
-        "Maior de 18+"
+        "Trajar roupa caipira",
+        "Participar das brincadeiras"
       ],
-      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
-      "valor": 450,
-      "organizador": 1,
+      "data": "2025-06-24",
+      "organizador": 2,
       "participantes": [
+        2,
+        4
+      ],
+      "convidados": [
         1
-      ],
-      "convidados": [
-        "Rafhael"
-      ],
-      "id": 3
+      ]
     },
     {
-      "nome": "Festa 4",
-      "data": "2024-12-21",
+      "id": 7,
+      "nome": "Festa de Halloween",
+      "descricao": "Festa de Halloween com concurso de fantasias e doces ou travessuras.",
+      "valor": 40,
       "regras": [
-        "Identida",
-        "Maior de 18+",
-        "Pulseira do evento é obrigatoria"
+        "Usar fantasia",
+        "Trazer doces para a brincadeira"
       ],
-      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
-      "valor": 450,
-      "organizador": 1,
+      "data": "2025-10-31",
+      "organizador": 3,
       "participantes": [
-        1
-      ],
-      "convidados": [
-        "Rafhael"
-      ],
-      "id": 4
-    },
-    {
-      "nome": "Festa 5",
-      "data": "2024-12-21",
-      "regras": [
-        "Identida",
-        "Maior de 18+",
-        "Pulseira do evento é obrigatoria"
-      ],
-      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
-      "valor": 450,
-      "organizador": 1,
-      "participantes": [
-        1
-      ],
-      "convidados": [
-        "Rafhael"
-      ],
-      "id": 5
-    },
-    {
-      "nome": "Festa 5",
-      "data": "2024-12-21",
-      "regras": [
-        "Identida",
-        "Maior de 18+",
-        "Pulseira do evento é obrigatoria"
-      ],
-      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
-      "valor": 450,
-      "organizador": 1,
-      "participantes": [
-        1
-      ],
-      "convidados": [
-        "Rafhael"
-      ],
-      "id": 6
-    },
-    {
-      "nome": "Festa 6",
-      "data": "2025-09-04",
-      "regras": [
-        "Regra 1"
-      ],
-      "descricao": "ofiapd~m sjvdsv",
-      "valor": 876,
-      "participantes": [],
-      "convidados": [
-        "joao"
-      ],
-      "id": 7
-    },
-    {
-      "nome": "Festa 6",
-      "data": "2025-09-04",
-      "regras": [
-        "Regra 1"
-      ],
-      "descricao": "ofiapd~m sjvdsv",
-      "valor": 876,
-      "participantes": [],
-      "convidados": [
-        "joao"
-      ],
-      "id": 8
-    },
-    {
-      "nome": "Festa10",
-      "data": "2025-03-14",
-      "regras": [
-        "jksbcszxc",
-        "kjasbcsz"
-      ],
-      "descricao": "jakfclm djvnsdvc",
-      "valor": 124,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 9
-    },
-    {
-      "nome": "festa 11",
-      "data": "2025-06-26",
-      "regras": [
-        "askjflcnaf"
-      ],
-      "descricao": "jsabckjzvcbnekfvdsf",
-      "valor": 856,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 10
-    },
-    {
-      "nome": "festa11",
-      "data": "2025-04-12",
-      "regras": [
-        "janvldvs"
-      ],
-      "descricao": "jaosnlcmjkf",
-      "valor": 123,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 11
-    },
-    {
-      "nome": "festa11",
-      "data": "2025-04-12",
-      "regras": [
-        "janvldvs"
-      ],
-      "descricao": "jaosnlcmjkf",
-      "valor": 123,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 12
-    },
-    {
-      "nome": "Festa 15",
-      "data": "2024-03-12",
-      "regras": [
-        "sabfhcijaoslkcas",
-        "jasbcasc"
-      ],
-      "descricao": "Festa 12",
-      "valor": 124,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 13
-    },
-    {
-      "nome": "wfesdf",
-      "data": "2024-12-05",
-      "regras": [
-        "edagv"
-      ],
-      "descricao": "frsetgwrsg",
-      "valor": 123,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 14
-    },
-    {
-      "nome": "waczsfqw",
-      "data": "2024-12-20",
-      "regras": [
-        "fcasv",
-        "asfas"
-      ],
-      "descricao": "casgeasdf",
-      "valor": 123,
-      "organizador": 1,
-      "participantes": [],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 15
-    },
-    {
-      "nome": "adcs\\",
-      "data": "2024-12-19",
-      "regras": [
-        "wA\\SC"
-      ],
-      "descricao": "aszfawes",
-      "valor": 123,
-      "organizador": 1,
-      "participantes": [
-        1
-      ],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 16
-    },
-    {
-      "nome": "asffas",
-      "data": "2024-12-26",
-      "regras": [
-        "dcas\\zd"
-      ],
-      "descricao": "afsfc",
-      "valor": 123,
-      "organizador": 1,
-      "participantes": [
-        1
-      ],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 17
-    },
-    {
-      "nome": "dcsazx",
-      "data": "2024-12-27",
-      "regras": [
-        "faszcx"
-      ],
-      "descricao": "faszxfc",
-      "valor": 123,
-      "organizador": 1,
-      "participantes": [
-        1
-      ],
-      "convidados": [
-        "Yago"
-      ],
-      "id": 18
-    },
-    {
-      "nome": "ihcasjc",
-      "data": "2024-12-19",
-      "regras": [
-        "saczx",
-        "cfasx"
-      ],
-      "descricao": "feasc",
-      "valor": 123,
-      "organizador": 1,
-      "participantes": [
-        1,
         3
       ],
-      "convidados": [],
-      "id": 19
+      "convidados": [
+        1
+      ]
     },
     {
-      "nome": "icbhz",
-      "data": "2024-12-17",
+      "id": 8,
+      "nome": "Festa de Páscoa",
+      "descricao": "Celebração de Páscoa com caça aos ovos e brunch especial.",
+      "valor": 60,
       "regras": [
-        "asdc"
+        "Trazer ovos de chocolate",
+        "Participar da caça aos ovos"
       ],
-      "descricao": "awlkshcbz",
-      "valor": 123,
-      "organizador": 1,
+      "data": "2025-04-21",
+      "organizador": 3,
       "participantes": [
-        1,
         3
       ],
-      "convidados": [],
-      "id": 20
+      "convidados": [
+        1
+      ]
     },
     {
-      "nome": "aefcfc",
-      "data": "2024-12-28",
+      "id": 9,
+      "nome": "Festa do Pijama",
+      "descricao": "Festa do Pijama com filmes, jogos e lanches a noite toda.",
+      "valor": 20,
       "regras": [
-        "efadsc"
+        "Trazer pijama",
+        "Respeitar horário de silêncio"
       ],
-      "descricao": "wafcssa",
-      "valor": 325,
-      "organizador": 1,
+      "data": "2025-03-15",
+      "organizador": 3,
       "participantes": [
-        1,
         3
       ],
-      "convidados": [],
-      "id": 21
+      "convidados": [
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "nome": "Festa à Fantasia",
+      "descricao": "Festa à Fantasia com concurso e premiação para as melhores fantasias.",
+      "valor": 50,
+      "regras": [
+        "Usar fantasia",
+        "Participar do concurso"
+      ],
+      "data": "2025-09-10",
+      "organizador": 4,
+      "participantes": [
+        4
+      ],
+      "convidados": [
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "nome": "Festa de Despedida",
+      "descricao": "Despedida de um amigo com música e lembranças compartilhadas.",
+      "valor": 20,
+      "regras": [
+        "Trazer uma lembrança",
+        "Participar das atividades"
+      ],
+      "data": "2025-07-20",
+      "organizador": 4,
+      "participantes": [
+        4
+      ],
+      "convidados": [
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "nome": "Festa de Verão",
+      "descricao": "Festa de Verão na praia com esportes aquáticos e churrasco.",
+      "valor": 100,
+      "regras": [
+        "Trazer protetor solar",
+        "Participar das atividades"
+      ],
+      "data": "2025-01-15",
+      "organizador": 4,
+      "participantes": [
+        4
+      ],
+      "convidados": [
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "nome": "Festa de Inverno",
+      "descricao": "Festa de Inverno com fondue, vinho quente e fogueira.",
+      "valor": 80,
+      "regras": [
+        "Trazer um prato quente",
+        "Usar roupas de inverno"
+      ],
+      "data": "2025-06-10",
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        2
+      ]
+    },
+    {
+      "id": 14,
+      "nome": "Festa de Primavera",
+      "descricao": "Festa de Primavera com flores, música ao vivo e piquenique.",
+      "valor": 50,
+      "regras": [
+        "Trazer flores",
+        "Participar das atividades"
+      ],
+      "data": "2025-09-23",
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        2
+      ]
     }
   ]
 }

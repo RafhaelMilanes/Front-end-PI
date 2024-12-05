@@ -9,7 +9,7 @@ import { AuthContext } from "@/context/AuthContext";
 
 function perfil() {
   const context = useContext(AuthContext);
-  const [nameField, setNameField] = useState(context?.usuario?.email);
+  const [nameField, setNameField] = useState(context?.usuario?.nome);
   const [emailField, setEmailField] = useState(context?.usuario?.email);
   const [passwordField, setPasswordField] = useState("");
 
