@@ -11,11 +11,13 @@ import { useContext, useEffect } from "react";
 export default function Page() {
   const contextAuth = useContext(AuthContext)
   const router = useRouter();
+
   useEffect(() => {
     if (contextAuth?.usuario === null) {
       router.push("/")
     }
   }, [])
+
   return (
     <>
       <NavBar />
