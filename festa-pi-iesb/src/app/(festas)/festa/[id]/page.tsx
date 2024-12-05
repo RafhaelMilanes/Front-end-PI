@@ -2,9 +2,8 @@
 import Imagem from "@/components/ui/imagem";
 import React, { useContext, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { buscarUm } from "@/service/FestasService";
+import { buscarUm, adicionarParticipante } from "@/service/FestasService";
 import { AuthContext } from "@/context/AuthContext";
-import { FestasContext } from "@/context/FestaContext";
 
 function Page() {
   const contextUser = useContext(AuthContext);
@@ -25,27 +24,34 @@ function Page() {
     data: "",
     descricao: "",
     regras: [],
-    participantes: [],
-    organizador: 0,
+    participantesDetalhes: [] as { id: number; nome: string }[],
+    organizadorDetalhes: null as { id: number; nome: string } | null,
     valor: 0,
   });
 
   const carregarUm = async (festaId: string): Promise<void> => {
     const resposta = await buscarUm(festaId);
     if (resposta.sucesso) {
-      setFesta(resposta.dados);
+      setFesta({
+        ...resposta.dados,
+        participantesDetalhes: resposta.dados.participantesDetalhes || [],
+        organizadorDetalhes: resposta.dados.organizadorDetalhes || null,
+      });
     } else {
-      setErro(resposta.mensagem);
+      setErro(resposta.msg);
     }
   };
 
-  const contextFesta = useContext(FestasContext);
   const usuarioId = contextUser?.usuario?.id;
 
   const handleParticipar = async () => {
-    if (contextFesta && usuarioId) {
-      await contextFesta.addParticipante(usuarioId, parseInt(festaId));
-      carregarUm(festaId); // Recarregar a festa para atualizar a lista de participantes
+    if (usuarioId) {
+      const resposta = await adicionarParticipante(usuarioId, parseInt(festaId));
+      if (resposta.sucesso) {
+        carregarUm(festaId);
+      } else {
+        setErro(resposta.msg);
+      }
     }
   };
 
@@ -53,7 +59,7 @@ function Page() {
     carregarUm(festaId);
   }, [festaId]);
 
-  const isParticipating = festa.participantes.includes(usuarioId);
+  const isParticipating = festa.participantesDetalhes.some(participante => participante.id === usuarioId);
 
   return (
     <div className="flex flex-col">
@@ -75,18 +81,22 @@ function Page() {
       <section className="px-8 mt-20">
         <h2 className="text-4xl mb-4">Participantes</h2>
         <ul>
-          {festa.participantes.map((item, index) => (
+          {festa.participantesDetalhes.map((participante, index) => (
             <li key={index} className="list-disc mx-5">
-              {item}
+              {participante.nome}
             </li>
           ))}
         </ul>
       </section>
       <section className="px-8 mt-20">
         <h2 className="text-4xl mb-4">Organizadores</h2>
-            <p className="list-disc mx-5">
-              {festa.organizador}
-            </p>
+        <ul>
+          {festa.organizadorDetalhes && (
+            <li className="list-disc mx-5">
+              {festa.organizadorDetalhes.nome}
+            </li>
+          )}
+        </ul>
       </section>
       <section className="px-8 mt-20">
         <h2 className="text-4xl mb-4">Valor</h2>

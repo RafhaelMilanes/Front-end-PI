@@ -5,7 +5,13 @@
       "password": "$2a$10$9B9ix7aMtdbHO8oC0HHaK.bpphhRdtUbSRRSzZTDsIg07OAfVjXSy",
       "nome": "Pedro",
       "festas": [
-        1
+        1,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
       ],
       "amigos": [
         2
@@ -26,7 +32,11 @@
       "email": "yago@gmail.com",
       "password": "$2a$10$u1yOCbQiTP6haaQPXRbYRuNe91h3adLn9z0snUnYd/MPUyU1wgLc6",
       "nome": "Yago",
-      "festas": [],
+      "festas": [
+        19,
+        20,
+        21
+      ],
       "amigos": [],
       "id": 3
     },
@@ -71,6 +81,311 @@
       "participantes": [],
       "convidados": [],
       "id": 2
+    },
+    {
+      "nome": "Festa 3",
+      "data": "2024-12-20",
+      "regras": [
+        "Identida",
+        "Maior de 18+"
+      ],
+      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
+      "valor": 450,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Rafhael"
+      ],
+      "id": 3
+    },
+    {
+      "nome": "Festa 4",
+      "data": "2024-12-21",
+      "regras": [
+        "Identida",
+        "Maior de 18+",
+        "Pulseira do evento é obrigatoria"
+      ],
+      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
+      "valor": 450,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Rafhael"
+      ],
+      "id": 4
+    },
+    {
+      "nome": "Festa 5",
+      "data": "2024-12-21",
+      "regras": [
+        "Identida",
+        "Maior de 18+",
+        "Pulseira do evento é obrigatoria"
+      ],
+      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
+      "valor": 450,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Rafhael"
+      ],
+      "id": 5
+    },
+    {
+      "nome": "Festa 5",
+      "data": "2024-12-21",
+      "regras": [
+        "Identida",
+        "Maior de 18+",
+        "Pulseira do evento é obrigatoria"
+      ],
+      "descricao": "pofihcbasfopjnafjcb dehufbsjzxkcahfbe ewiofljrpqworfjfgnfpdosjfnsklv efiowehusfv",
+      "valor": 450,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Rafhael"
+      ],
+      "id": 6
+    },
+    {
+      "nome": "Festa 6",
+      "data": "2025-09-04",
+      "regras": [
+        "Regra 1"
+      ],
+      "descricao": "ofiapd~m sjvdsv",
+      "valor": 876,
+      "participantes": [],
+      "convidados": [
+        "joao"
+      ],
+      "id": 7
+    },
+    {
+      "nome": "Festa 6",
+      "data": "2025-09-04",
+      "regras": [
+        "Regra 1"
+      ],
+      "descricao": "ofiapd~m sjvdsv",
+      "valor": 876,
+      "participantes": [],
+      "convidados": [
+        "joao"
+      ],
+      "id": 8
+    },
+    {
+      "nome": "Festa10",
+      "data": "2025-03-14",
+      "regras": [
+        "jksbcszxc",
+        "kjasbcsz"
+      ],
+      "descricao": "jakfclm djvnsdvc",
+      "valor": 124,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 9
+    },
+    {
+      "nome": "festa 11",
+      "data": "2025-06-26",
+      "regras": [
+        "askjflcnaf"
+      ],
+      "descricao": "jsabckjzvcbnekfvdsf",
+      "valor": 856,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 10
+    },
+    {
+      "nome": "festa11",
+      "data": "2025-04-12",
+      "regras": [
+        "janvldvs"
+      ],
+      "descricao": "jaosnlcmjkf",
+      "valor": 123,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 11
+    },
+    {
+      "nome": "festa11",
+      "data": "2025-04-12",
+      "regras": [
+        "janvldvs"
+      ],
+      "descricao": "jaosnlcmjkf",
+      "valor": 123,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 12
+    },
+    {
+      "nome": "Festa 15",
+      "data": "2024-03-12",
+      "regras": [
+        "sabfhcijaoslkcas",
+        "jasbcasc"
+      ],
+      "descricao": "Festa 12",
+      "valor": 124,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 13
+    },
+    {
+      "nome": "wfesdf",
+      "data": "2024-12-05",
+      "regras": [
+        "edagv"
+      ],
+      "descricao": "frsetgwrsg",
+      "valor": 123,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 14
+    },
+    {
+      "nome": "waczsfqw",
+      "data": "2024-12-20",
+      "regras": [
+        "fcasv",
+        "asfas"
+      ],
+      "descricao": "casgeasdf",
+      "valor": 123,
+      "organizador": 1,
+      "participantes": [],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 15
+    },
+    {
+      "nome": "adcs\\",
+      "data": "2024-12-19",
+      "regras": [
+        "wA\\SC"
+      ],
+      "descricao": "aszfawes",
+      "valor": 123,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 16
+    },
+    {
+      "nome": "asffas",
+      "data": "2024-12-26",
+      "regras": [
+        "dcas\\zd"
+      ],
+      "descricao": "afsfc",
+      "valor": 123,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 17
+    },
+    {
+      "nome": "dcsazx",
+      "data": "2024-12-27",
+      "regras": [
+        "faszcx"
+      ],
+      "descricao": "faszxfc",
+      "valor": 123,
+      "organizador": 1,
+      "participantes": [
+        1
+      ],
+      "convidados": [
+        "Yago"
+      ],
+      "id": 18
+    },
+    {
+      "nome": "ihcasjc",
+      "data": "2024-12-19",
+      "regras": [
+        "saczx",
+        "cfasx"
+      ],
+      "descricao": "feasc",
+      "valor": 123,
+      "organizador": 1,
+      "participantes": [
+        1,
+        3
+      ],
+      "convidados": [],
+      "id": 19
+    },
+    {
+      "nome": "icbhz",
+      "data": "2024-12-17",
+      "regras": [
+        "asdc"
+      ],
+      "descricao": "awlkshcbz",
+      "valor": 123,
+      "organizador": 1,
+      "participantes": [
+        1,
+        3
+      ],
+      "convidados": [],
+      "id": 20
+    },
+    {
+      "nome": "aefcfc",
+      "data": "2024-12-28",
+      "regras": [
+        "efadsc"
+      ],
+      "descricao": "wafcssa",
+      "valor": 325,
+      "organizador": 1,
+      "participantes": [
+        1,
+        3
+      ],
+      "convidados": [],
+      "id": 21
     }
   ]
 }

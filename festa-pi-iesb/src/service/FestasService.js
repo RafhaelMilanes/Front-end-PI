@@ -13,15 +13,39 @@ function buscarTodos() {
     });
 }
 
-function buscarUm(id) {
-  return axios
-    .get(`${url}/festas/${id}`)
-    .then((response) => {
-      return { sucesso: true, dados: response.data, mensagem: "" };
-    })
-    .catch((error) => {
-      return { sucesso: false, dados: null, mensagem: "Ocorreu um erro!" };
-    });
+async function buscarUm(festaId) {
+  try {
+    const responseFesta = await axios.get(`${url}/festas/${festaId}`);
+    const festa = responseFesta.data;
+    const participantesDetalhes = [];
+    let organizadorDetalhes = null;
+    if (Array.isArray(festa.participantes)) {
+      const participantesRequests = festa.participantes.map((id) =>
+        axios.get(`${url}/users/${id}`)
+      );
+      const participantesResponses = await Promise.all(participantesRequests);
+      participantesResponses.forEach((response) => {
+        participantesDetalhes.push(response.data);
+      });
+    }
+    if (typeof festa.organizador === "number") {
+      const responseOrganizador = await axios.get(
+        `${url}/users/${festa.organizador}`
+      );
+      organizadorDetalhes = responseOrganizador.data;
+    }
+    return {
+      sucesso: true,
+      dados: { ...festa, participantesDetalhes, organizadorDetalhes },
+      msg: "",
+    };
+  } catch (error) {
+    if (error.response) {
+      return { sucesso: false, msg: error.response.data };
+    } else {
+      return { sucesso: false, msg: error.message };
+    }
+  }
 }
 
 function adicionar(dados) {
@@ -196,6 +220,24 @@ async function buscarFestasParticipando(usuarioId) {
   }
 }
 
+async function verificarUsuario(nomeUsuario) {
+  try {
+    const response = await axios.get(`${url}/users?nome=${nomeUsuario}`);
+    const usuario = response.data[0];
+    if (usuario) {
+      return { sucesso: true, dados: usuario, msg: "" };
+    } else {
+      return { sucesso: false, msg: "Usuário não encontrado." };
+    }
+  } catch (error) {
+    if (error.response) {
+      return { sucesso: false, msg: error.response.data };
+    } else {
+      return { sucesso: false, msg: error.message };
+    }
+  }
+}
+
 export {
   adicionar,
   buscarTodos,
@@ -204,5 +246,6 @@ export {
   recusarConvite,
   buscarConvites,
   aceitarConvite,
-  buscarFestasParticipando
+  buscarFestasParticipando,
+  verificarUsuario
 };
