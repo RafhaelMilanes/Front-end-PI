@@ -9,6 +9,7 @@ import {
   aceitarConvite,
   recusarConvite,
   buscarFestasParticipando,
+  verificarUsuario,
 } from "@/service/FestasService";
 
 interface FestasContextType {
@@ -16,7 +17,7 @@ interface FestasContextType {
   setFestas: React.Dispatch<React.SetStateAction<object[]>>;
   erro: string | undefined;
   setErro: React.Dispatch<React.SetStateAction<string | undefined>>;
-  criarFesta: (dados: object) => Promise<void>;
+  criarFesta: (dados: object) => Promise<{ sucesso: boolean, dados?: object, msg: string }>;
   carregar: () => Promise<void>;
   carregarUm: (id: number) => Promise<void>;
   addParticipante: (usuarioId: number, festaId: number) => Promise<void>;
@@ -28,6 +29,9 @@ interface FestasContextType {
   FestasPartcipante: (
     usuarioId: number | undefined
   ) => Promise<{ sucesso: boolean; dados: object[]; msg: string }>;
+  verificarParticipante: (
+    nomeUsuario: string
+  ) => Promise<{ sucesso: boolean; dados: object; mensagem: string }>;
 }
 
 const FestasContext = createContext<FestasContextType | undefined>(undefined);
@@ -43,20 +47,26 @@ function FestasProvider({ children }: FestasProviderProps) {
   const criarFesta = async (dados: object) => {
     const resposta = await adicionar(dados);
     if (resposta.sucesso) {
-      console.log("deu bom!");
+      setFestas([...Festas, resposta.dados]);
+      return { sucesso: true, dados: resposta.dados, msg: "" };
     } else {
-      return resposta.mensagem;
+      setErro(resposta.msg);
+      return { sucesso: false, msg: resposta.msg };
     }
-    return "";
   };
-
+  
   const carregar = async (): Promise<void> => {
-    setFestas([]);
-    const resposta = await buscarTodos();
-    if (resposta.sucesso) {
-      setFestas(resposta.dados);
-    } else {
-      setErro(resposta.mensagem);
+    try {
+      const resposta = await buscarTodos();
+      if (resposta.sucesso) {
+        return resposta.dados;
+      } else {
+        setErro(resposta.msg);
+        return [];
+      }
+    } catch (error) {
+      setErro(error.message);
+      return [];
     }
   };
 
@@ -143,6 +153,16 @@ function FestasProvider({ children }: FestasProviderProps) {
     }
   };
 
+  const verificarParticipante = async (nomeUsuario: string) => {
+    const resposta = await verificarUsuario(nomeUsuario);
+    if (resposta.sucesso) {
+      return resposta;
+    } else {
+      setErro(resposta.mensagem);
+      return resposta;
+    }
+  };
+
   return (
     <FestasContext.Provider
       value={{
@@ -157,7 +177,8 @@ function FestasProvider({ children }: FestasProviderProps) {
         addConvite,
         removeConvite,
         procurarConvites,
-        FestasPartcipante
+        FestasPartcipante,
+        verificarParticipante,
       }}
     >
       {children}

@@ -1,9 +1,13 @@
 "use client"
 import { AuthContext } from "@/context/AuthContext";
 import { FestasContext } from "@/context/FestaContext";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 function SecaoFestasJáMarcadas() {
+  const router = useRouter()
+
   const contextFesta = useContext(FestasContext);
   const contextAuth = useContext(AuthContext);
 
@@ -18,7 +22,7 @@ function SecaoFestasJáMarcadas() {
             contextAuth.usuario.id
           );
           if (resposta) {
-            setFestas(resposta);
+            setFestas(resposta.slice(0,3));
             setErro(undefined);
           } else {
             setErro("Não foi possível buscar as festas.");
@@ -37,7 +41,7 @@ function SecaoFestasJáMarcadas() {
       {erro && <p className="text-red-700">{erro}</p>}
       <ul className="grid w-full grid-rows-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
         {festas.map((item, index) => (
-          <li className="bg-white mx-10 my-8 rounded-3xl" key={index}>
+          <li className="bg-white mx-10 my-8 rounded-3xl" key={index} onClick={() => {router.push(`/festa/dashboard?a=${item.id}`)}}>
             <div className="bg-[#97a2d7] text-white px-5 py-4 rounded-t-3xl">
               <h3 className="text-3xl">{item.nome}</h3>
               <p className="text-xl">{item.data}</p>
