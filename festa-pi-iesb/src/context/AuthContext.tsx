@@ -28,7 +28,7 @@ interface AuthProviderProps {
 }
 
 function AuthProvider({ children }: AuthProviderProps) {
-  const [usuario, setUsuario] = useState<UserData | null>({id:1});
+  const [usuario, setUsuario] = useState<UserData | null>();
 
   const login = async (dados: UserData) => {
     const resposta = await autenticar(dados);
