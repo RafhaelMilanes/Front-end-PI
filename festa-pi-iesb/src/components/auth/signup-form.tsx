@@ -1,21 +1,34 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Input } from "../ui/input";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "../ui/button";
 import { faPerson } from "@fortawesome/free-solid-svg-icons/faPerson";
 import Link from "next/link";
+import { AuthContext } from "@/context/AuthContext";
+import { InputSenha } from "../ui/inputEmail";
 
 export const SignupForm = () => {
   const router = useRouter();
   const [nameField, setNameField] = useState("");
   const [emailField, setEmailField] = useState("@gmail.com");
   const [passwordField, setPasswordField] = useState("");
+  const [msg, setMsg] = useState("");
 
-  const handleEnterButton = () => {
-    router.replace("/home");
+  const context = useContext(AuthContext);
+
+  const handleEnterButton = async () => {
+    const user = { nome: nameField, email: emailField, senha: passwordField };
+    setMsg("");
+
+    const erro = await context?.registrar(user);
+    if (erro) {
+      setMsg(erro);
+    } else {
+      router.replace("/");
+    }
   };
   return (
     <>
@@ -26,7 +39,7 @@ export const SignupForm = () => {
         value={nameField}
         onChange={(t) => setNameField(t)}
       />
-      <Input
+      <InputSenha
         label="Email:"
         placeholder="Digite seu e-mail"
         icon={faEnvelopeOpen}
@@ -40,7 +53,7 @@ export const SignupForm = () => {
         onChange={(t) => setPasswordField(t)}
         password
       />
-      <div className="flex justify-center items-center self-end mt-[-20px] md:flex-row">
+      <div className="flex justify-center items-center self-end md:flex-row">
         <div className="text-gray-500">Já tem uma conta?</div>
         <Link href={"/signin"} className="hover:underline">
           Entrar

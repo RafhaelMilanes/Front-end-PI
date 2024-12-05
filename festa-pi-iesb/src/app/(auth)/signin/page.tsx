@@ -1,9 +1,17 @@
+"use client"
 import { SigninForm } from "@/components/auth/signin-form";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
+import { AuthContext } from "@/context/AuthContext";
 import Link from "next/link";
+import { useContext, useEffect } from "react";
 
 export default function Page() {
+  const contextAuth = useContext(AuthContext)
+  useEffect(() => {
+    contextAuth?.logout()
+  }, [])
+
   return (
     <div className="w-screen h-screen flex justify-center items-center">
       <div className="w-[38rem] mx-5 bg-white rounded-3xl">

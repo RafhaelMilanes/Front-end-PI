@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function CriarNovaFesta() {
     return(
-        <Link href="/nova_Festa" className="self-center py-8">
+        <Link href="/nova" className="self-center py-8">
             <section>
                 <div className="bg-[#97a2d7] text-white px-5 py-4 rounded-t-3xl">
                     <h3 className="text-3xl">Criar Nova Festa</h3>

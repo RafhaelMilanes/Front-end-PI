@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { useEffect, useState, useContext } from "react";
 import { FestasContext } from "@/context/FestaContext";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export const useScreenWidth = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -18,19 +20,16 @@ export const useScreenWidth = () => {
   return screenWidth;
 };
 
-export const Explorar = () => {
-
-  const context = useContext(FestasContext);
-  useEffect(() => {context?.carregar()}, [])
-
+export const Explorar = (props) => {
+  const router = useRouter();
   const tamanhoTela = useScreenWidth();
 
   return (
     <>
       {tamanhoTela > 735 ? (
         <ul>
-          {context?.Festas.map((item, index) => (
-            <li className="w-full mb-8 px-10" key={index}>
+          {props.festas.map((item, index) => (
+            <li className="w-full my-8" key={index}>
               <div className="flex justify-center w-full">
                 {/* Parte Esquerda */}
                 <div className="w-[20%] py-3 flex-col bg-[#97A2D7] text-white flex justify-center items-start px-8 rounded-s-3xl">
@@ -40,15 +39,18 @@ export const Explorar = () => {
                 </div>
 
                 {/* Parte Central */}
-                <div className="w-[60%] bg-white flex justify-start items-start px-3">
+                <div className="w-[55%] bg-white flex justify-start items-start px-3">
                   <p>{item.descricao}</p>
                 </div>
 
                 {/* Parte Direita */}
-                <div className="w-[10%] bg-[#97A2D7] justify-around	 text-white flex justify-center items-center rounded-e-3xl">
-                  <button className="flex flex-col items-center">
-                    <p>Comprar ingresso</p>
-                  </button>
+                <div
+                  className="w-[15%] bg-[#97A2D7] justify-around	 text-white flex justify-center items-center rounded-e-3xl"
+                  onClick={() => {
+                    router.push(`/festa/dashboard?a=${item.id}`);
+                  }}
+                >
+                  <p>Comprar ingresso</p>
                 </div>
               </div>
             </li>
@@ -56,7 +58,7 @@ export const Explorar = () => {
         </ul>
       ) : (
         <ul>
-          {context?.Festas.map((item, index) => (
+          {props.festas.map((item, index) => (
             <li className="w-full px-10 py-5" key={index}>
               <div className="">
                 {/* Parte Top Mobile*/}
@@ -73,9 +75,12 @@ export const Explorar = () => {
 
                 {/* Parte Down Mobile*/}
                 <div className="flex flex-row justify-evenly items-center bg-[#97A2D7] text-white py-4 rounded-b-3xl">
-                  <button className="flex flex-col items-center">
+                  <Link
+                    href={`/festa/dashboard?a=${item.id}`}
+                    className="flex flex-col items-center"
+                  >
                     <p>Comprar ingresso</p>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </li>

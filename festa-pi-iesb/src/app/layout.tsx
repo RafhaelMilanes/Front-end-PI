@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { FestasProvider } from "@/context/FestaContext";
+import { AuthProvider } from "@/context/AuthContext";
+import { Amigos } from "@/components/ui/amigos";
+import { AmigosProvider } from "@/context/AmigosContext";
 
 export const metadata: Metadata = {
   title: "Social Party",
@@ -14,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-        <body><FestasProvider>{children}</FestasProvider></body>
+      <body>
+        <AuthProvider>
+          <AmigosProvider>
+            <FestasProvider>{children}</FestasProvider>
+          </AmigosProvider>
+        </AuthProvider>
+      </body>
     </html>
   );
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import NavBar from "./navBar";
 
@@ -23,7 +23,7 @@ function Imagem(props) {
   const item = {
     title: props.titulo,
     date: props.data,
-    imagem: "/assets/images/Imagem.png",
+    imagem: "/assets/images/imagem.png",
   };
 
   const tamanhoTela = useScreenWidth();
